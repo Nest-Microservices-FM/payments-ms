@@ -76,7 +76,6 @@ export class PaymentsService {
           orderId: chargeSucceeded.metadata.orderId,
           receiptUrl: chargeSucceeded.receipt_url
         }
-        console.log(payload);
         this.client.emit('payment.succeeded', payload)
       break;
       default:
